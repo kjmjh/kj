@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>这里填写标题</title>
-<meta name="keywords" content="这里填写关键词" />
-<meta name="description" content="这里填写说明内容" />
-
-<style type="text/css">
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  minwidth: 100%; 
-  minheight: 100%;
-}
-</style>
-
-
+    <title>Video Background</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .videobackground {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .videobackground video {
+            minwidth: 100%;
+            minheight: 100%;
+            objectfit: cover;
+        }
+    </style>
+</head>
 <body>
-<video autoplay muted loop id="myVideo">
-  <source src="https://vd3.bdstatic.com/mda-qeqgigfi0xijrpwf/720p/h264/1716637389638790724/mda-qeqgigfi0xijrpwf.mp4?pd=19&vt=1" type="video/mp4">
-  您的浏览器不支持HTML5视频。
-</video>
+    <div class="videobackground">
+        <video autoplay muted loop id="myVideo">
+            <source src="https://vd3.bdstatic.com/mda-qeqgigfi0xijrpwf/720p/h264/1716637389638790724/mda-qeqgigfi0xijrpwf.mp4?pd=19&vt=1" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
